@@ -1,0 +1,10 @@
+build:
+	gcc -o mbrextractor mbrextractor.c -Imbrexport -Wall -Wextra
+install:
+	sudo cp mbrextractor /usr/local/bin/
+	sudo chmod +x /usr/local/bin/mbrextractor
+	sudo ln -s /usr/local/bin/mbrextractor /usr/bin/mbrextractor
+	sudo ln -s /usr/local/bin/mbrextractor /bin/mbrextractor
+uninstall:
+	rm -f mbrextractor
+	sudo rm -f /usr/local/bin/mbrextractor
