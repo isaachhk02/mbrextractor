@@ -17,7 +17,19 @@ A lightweight command-line tool for extracting the Master Boot Record (MBR) from
 
 ### About
 
-MBR Extractor is a simple yet powerful command-line utility that allows you to extract the Master Boot Record (MBR) from physical devices such as hard drives and save it to a binary file. The tool is designed to be lightweight, efficient, and easy to use across different operating systems.
+MBR Extractor is a simple yet powerful command-line utility that allows you to extract the Master Boot Record (MBR) from physical devices such as hard drives and save it to a binary file. The tool provides a straightforward interface for accessing low-level disk information with proper safety confirmations.
+
+### 💡 Use Cases
+
+This utility can be used for:
+
+- **Data Recovery & Backup**: Create backups of the MBR for disaster recovery purposes
+- **Forensic Analysis**: Extract MBR data for security investigations and digital forensics
+- **System Diagnostics**: Analyze boot sector information to troubleshoot boot problems
+- **Disk Imaging**: Capture the boot sector as part of comprehensive disk imaging workflows
+- **System Maintenance**: Save MBR copies before performing system updates or migrations
+- **Educational Purposes**: Learn about disk structure and boot processes at a low level
+- **Partition Table Analysis**: Examine partition information stored in the MBR
 
 ### ✨ Features
 
@@ -131,7 +143,19 @@ Created by [isaachhk02](https://github.com/isaachhk02)
 
 ### Acerca de
 
-MBR Extractor es una utilidad de línea de comandos simple pero potente que le permite extraer el Registro de Arranque Maestro (MBR) de dispositivos físicos como discos duros y guardarlo en un archivo binario. La herramienta está diseñada para ser ligera, eficiente y fácil de usar en diferentes sistemas operativos.
+MBR Extractor es una utilidad de línea de comandos simple pero potente que le permite extraer el Registro de Arranque Maestro (MBR) de dispositivos físicos como discos duros y guardarlo en un archivo binario. La herramienta proporciona una interfaz directa para acceder a información de bajo nivel del disco con confirmaciones de seguridad apropiadas.
+
+### 💡 Casos de Uso
+
+Esta utilidad puede ser utilizada para:
+
+- **Recuperación de Datos y Copias de Seguridad**: Crear copias de seguridad del MBR para propósitos de recuperación ante desastres
+- **Análisis Forense**: Extraer datos del MBR para investigaciones de seguridad e informática forense
+- **Diagnóstico del Sistema**: Analizar información del sector de arranque para resolver problemas de inicio
+- **Imaging de Discos**: Capturar el sector de arranque como parte de flujos de trabajo de imaging de discos completo
+- **Mantenimiento del Sistema**: Guardar copias del MBR antes de realizar actualizaciones del sistema o migraciones
+- **Propósitos Educativos**: Aprender sobre la estructura del disco y los procesos de arranque a nivel bajo
+- **Análisis de Tabla de Particiones**: Examinar la información de particiones almacenada en el MBR
 
 ### ✨ Características
 
