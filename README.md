@@ -17,7 +17,7 @@ A lightweight command-line tool for extracting the Master Boot Record (MBR) from
 
 ### About
 
-MBR Extractor is a simple yet powerful command-line utility that allows you to extract the Master Boot Record (MBR) from physical devices such as hard drives and save it to a binary file. The tool supports both Windows and Linux platforms with appropriate device path handling for each operating system.
+MBR Extractor is a simple yet powerful command-line utility that allows you to extract the Master Boot Record (MBR) from physical devices such as hard drives and save it to a binary file. The tool is designed to be lightweight, efficient, and easy to use across different operating systems.
 
 ### ✨ Features
 
@@ -56,23 +56,63 @@ Run the executable with the device path and output file path as arguments:
 mbrextractor <device_path> <output_file>
 ```
 
-#### Windows Example
+#### Basic Examples
 
+**Windows - Extract MBR from first physical drive:**
 ```bash
 mbrextractor.exe \\.\PhysicalDrive0 mbr.bin
 ```
 
-#### Linux Example
-
+**Windows - Extract MBR from second physical drive:**
 ```bash
-./mbrextractor /dev/sda mbr.bin
+mbrextractor.exe \\.\PhysicalDrive1 mbr_drive1.bin
 ```
 
-#### Behavior
+**Linux - Extract MBR from /dev/sda:**
+```bash
+sudo ./mbrextractor /dev/sda mbr.bin
+```
 
-- If run without arguments or with incorrect arguments, the program displays usage instructions
-- The program prompts for confirmation before extracting the MBR
-- Extraction saves the first 512 bytes to the specified output file
+**Linux - Extract MBR from /dev/sdb:**
+```bash
+sudo ./mbrextractor /dev/sdb mbr_disk2.bin
+```
+
+#### Real-World Examples
+
+**Windows (with admin privileges):**
+```bash
+# Open Command Prompt as Administrator, then run:
+mbrextractor.exe \\.\PhysicalDrive0 C:\backup\mbr_backup.bin
+mbrextractor.exe \\.\PhysicalDrive0 D:\forensics\mbr_image.bin
+```
+
+**Linux (with sudo):**
+```bash
+# Extract MBR with timestamp in filename
+sudo ./mbrextractor /dev/sda ~/backup/mbr_$(date +%Y%m%d).bin
+
+# Extract from multiple drives
+sudo ./mbrextractor /dev/sda ./mbr_sda.bin
+sudo ./mbrextractor /dev/sdb ./mbr_sdb.bin
+```
+
+#### Program Behavior
+
+1. Run the program with device path and output file path
+2. The program displays the device path and output file path for confirmation
+3. You will be prompted to confirm the extraction operation
+4. If confirmed, the first 512 bytes (MBR) are read from the device
+5. The MBR data is written to the specified output file
+6. A success message is displayed with the output file path
+
+**Example output:**
+```
+Device:      \\.\PhysicalDrive0
+Output file: mbr.bin
+Proceed with extraction? (y/n): y
+MBR successfully extracted to: mbr.bin
+```
 
 ### ⚠️ Disclaimer
 
@@ -91,7 +131,7 @@ Created by [isaachhk02](https://github.com/isaachhk02)
 
 ### Acerca de
 
-MBR Extractor es una utilidad de línea de comandos simple pero poderosa que le permite extraer el Registro de Arranque Maestro (MBR) de dispositivos físicos como discos duros y guardarlo en un archivo binario. La herramienta es compatible con plataformas Windows y Linux con manejo apropiado de rutas de dispositivos para cada sistema operativo.
+MBR Extractor es una utilidad de línea de comandos simple pero potente que le permite extraer el Registro de Arranque Maestro (MBR) de dispositivos físicos como discos duros y guardarlo en un archivo binario. La herramienta está diseñada para ser ligera, eficiente y fácil de usar en diferentes sistemas operativos.
 
 ### ✨ Características
 
@@ -130,23 +170,63 @@ Ejecute el programa con la ruta del dispositivo y la ruta del archivo de salida 
 mbrextractor <ruta_dispositivo> <archivo_salida>
 ```
 
-#### Ejemplo en Windows
+#### Ejemplos Básicos
 
+**Windows - Extraer MBR de la primera unidad física:**
 ```bash
 mbrextractor.exe \\.\PhysicalDrive0 mbr.bin
 ```
 
-#### Ejemplo en Linux
-
+**Windows - Extraer MBR de la segunda unidad física:**
 ```bash
-./mbrextractor /dev/sda mbr.bin
+mbrextractor.exe \\.\PhysicalDrive1 mbr_disco1.bin
 ```
 
-#### Comportamiento
+**Linux - Extraer MBR de /dev/sda:**
+```bash
+sudo ./mbrextractor /dev/sda mbr.bin
+```
 
-- Si se ejecuta sin argumentos o con argumentos incorrectos, el programa muestra instrucciones de uso
-- El programa solicita confirmación antes de extraer el MBR
-- La extracción guarda los primeros 512 bytes en el archivo de salida especificado
+**Linux - Extraer MBR de /dev/sdb:**
+```bash
+sudo ./mbrextractor /dev/sdb mbr_disco2.bin
+```
+
+#### Ejemplos del Mundo Real
+
+**Windows (con privilegios de administrador):**
+```bash
+# Abra Símbolo del sistema como administrador, luego ejecute:
+mbrextractor.exe \\.\PhysicalDrive0 C:\copia_seguridad\mbr_backup.bin
+mbrextractor.exe \\.\PhysicalDrive0 D:\forense\mbr_imagen.bin
+```
+
+**Linux (con sudo):**
+```bash
+# Extraer MBR con fecha y hora en el nombre del archivo
+sudo ./mbrextractor /dev/sda ~/copia_seguridad/mbr_$(date +%Y%m%d).bin
+
+# Extraer de múltiples discos
+sudo ./mbrextractor /dev/sda ./mbr_sda.bin
+sudo ./mbrextractor /dev/sdb ./mbr_sdb.bin
+```
+
+#### Comportamiento del Programa
+
+1. Ejecute el programa con la ruta del dispositivo y la ruta del archivo de salida
+2. El programa muestra la ruta del dispositivo y la ruta del archivo de salida para confirmación
+3. Se le pedirá que confirme la operación de extracción
+4. Si confirma, se leen los primeros 512 bytes (MBR) del dispositivo
+5. Los datos del MBR se escriben en el archivo de salida especificado
+6. Se muestra un mensaje de éxito con la ruta del archivo de salida
+
+**Ejemplo de salida:**
+```
+Device:      \\.\PhysicalDrive0
+Output file: mbr.bin
+Proceed with extraction? (y/n): y
+MBR successfully extracted to: mbr.bin
+```
 
 ### ⚠️ Descargo de Responsabilidad
 
