@@ -7,7 +7,7 @@
 A lightweight command-line tool for extracting the Master Boot Record (MBR) from physical devices on Windows and Linux.
 
 ![C](https://img.shields.io/badge/Language-C-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+![License](https://img.shields.io/badge/License-GPL-green)
 
 </div>
 
@@ -17,7 +17,7 @@ A lightweight command-line tool for extracting the Master Boot Record (MBR) from
 
 ### About
 
-MBR Extractor is a simple yet powerful command-line utility that allows you to extract the Master Boot Record (MBR) from physical devices such as hard drives and save it to a binary file. The tool provides a straightforward interface for accessing low-level disk information with proper safety confirmations.
+MBR Extractor is a simple yet powerful command-line utility that allows you to extract the Master Boot Record (MBR) from physical devices such as hard drives and save it to a binary file. The tool[...]
 
 ### 💡 Use Cases
 
@@ -133,6 +133,10 @@ MBR successfully extracted to: mbr.bin
 - **Backup first**: Consider backing up important data before using this tool
 - **Read-only operation**: This tool only reads from devices; it does not modify any data
 
+### 📜 License
+
+This project is licensed under the GNU General Public License (GPL). See the [LICENSE](LICENSE) file for details.
+
 ### 👤 Author
 
 Created by [isaachhk02](https://github.com/isaachhk02)
@@ -143,7 +147,7 @@ Created by [isaachhk02](https://github.com/isaachhk02)
 
 ### Acerca de
 
-MBR Extractor es una utilidad de línea de comandos simple pero potente que le permite extraer el Registro de Arranque Maestro (MBR) de dispositivos físicos como discos duros y guardarlo en un archivo binario. La herramienta proporciona una interfaz directa para acceder a información de bajo nivel del disco con confirmaciones de seguridad apropiadas.
+MBR Extractor es una utilidad de línea de comandos simple pero potente que le permite extraer el Registro de Arranque Maestro (MBR) de dispositivos físicos como discos duros y guardarlo en un a[...]
 
 ### 💡 Casos de Uso
 
@@ -258,6 +262,10 @@ MBR successfully extracted to: mbr.bin
 - **Manéjelo con cuidado**: El uso incorrecto puede afectar la estabilidad del sistema
 - **Haga una copia de seguridad primero**: Considere hacer una copia de seguridad de datos importantes antes de usar esta herramienta
 - **Operación de solo lectura**: Esta herramienta solo lee desde dispositivos; no modifica ningún dato
+
+### 📜 Licencia
+
+Este proyecto está bajo la licencia GNU General Public License (GPL). Consulte el archivo [LICENSE](LICENSE) para más detalles.
 
 ### 👤 Autor
 
